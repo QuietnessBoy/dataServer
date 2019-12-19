@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.services.data.mapper.WifiInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.services.data.model.WifiInfo">
+        <id column="id" property="id" />
+        <result column="res_id" property="resId" />
+        <result column="res_name" property="resName" />
+        <result column="mac" property="mac" />
+        <result column="ip" property="ip" />
+        <result column="online_sta" property="onlineSta" />
+        <result column="online_user" property="onlineUser" />
+        <result column="offline_user" property="offlineUser" />
+        <result column="online_user_avg" property="onlineUserAvg" />
+        <result column="down_link_rate" property="downLinkRate" />
+        <result column="up_link_rate" property="upLinkRate" />
+        <result column="sessiontime" property="sessiontime" />
+        <result column="status" property="status" />
+        <result column="project_id" property="projectId" />
+        <result column="group_id" property="groupId" />
+        <result column="area_id" property="areaId" />
+        <result column="manu_id" property="manuId" />
+        <result column="manu" property="manu" />
+        <result column="model_id" property="modelId" />
+        <result column="model" property="model" />
+        <result column="res_platform" property="resPlatform" />
+        <result column="address" property="address" />
+        <result column="install_time" property="installTime" />
+        <result column="part_area" property="partArea" />
+        <result column="lat" property="lat" />
+        <result column="lon" property="lon" />
+        <result column="isinside" property="isinside" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="ac_res_id" property="acResId" />
+        <result column="serial_number" property="serialNumber" />
+        <result column="device_version" property="deviceVersion" />
+        <result column="parent_id" property="parentId" />
+        <result column="remake" property="remake" />
+        <result column="topology_id" property="topologyId" />
+        <result column="authtype" property="authtype" />
+        <result column="auth_policy_id" property="authPolicyId" />
+        <result column="MEMRate" property="MEMRate" />
+        <result column="CPURate" property="CPURate" />
+        <result column="link_threshold" property="linkThreshold" />
+        <result column="img_name" property="imgName" />
+        <result column="max_online" property="maxOnline" />
+        <result column="user_num_day" property="userNumDay" />
+        <result column="upstream_traffic" property="upstreamTraffic" />
+        <result column="downstream_traffic" property="downstreamTraffic" />
+        <result column="signal_strength" property="signalStrength" />
+        <result column="send_pkts_num" property="sendPktsNum" />
+        <result column="receive_pkts_num" property="receivePktsNum" />
+        <result column="drop_pkts_num" property="dropPktsNum" />
+        <result column="link_total_num" property="linkTotalNum" />
+        <result column="abortive_disconnect_num" property="abortiveDisconnectNum" />
+        <result column="association_fail_num" property="associationFailNum" />
+        <result column="group_num" property="groupNum" />
+        <result column="belong_ac" property="belongAc" />
+        <result column="notonlinetime" property="notonlinetime" />
+        <result column="buildunit" property="buildunit" />
+        <result column="break_updatetime" property="breakUpdatetime" />
+    </resultMap>
+    <delete id="clear">
+        delete from wifi_info where DATE_FORMAT(create_time,"%Y-%m-%d") != DATE_FORMAT(SYSDATE(),"%Y-%m-%d");
+    </delete>
+
+    <select id="selectWifiInfo" resultType="com.services.data.model.WifiInfo">
+        SELECT * FROM wifi_info limit 10000;
+    </select>
+
+
+</mapper>

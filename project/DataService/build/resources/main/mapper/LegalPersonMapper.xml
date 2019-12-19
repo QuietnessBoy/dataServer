@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.services.data.mapper.LegalPersonMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.services.data.model.LegalPerson">
+        <id column="id" property="id" />
+        <result column="org_code" property="orgCode" />
+        <result column="create_time" property="createTime" />
+        <result column="org_name" property="orgName" />
+        <result column="org_address" property="orgAddress" />
+        <result column="org_type_code" property="orgTypeCode" />
+        <result column="org_type_code_name" property="orgTypeCodeName" />
+        <result column="legal_person" property="legalPerson" />
+        <result column="reg_no" property="regNo" />
+        <result column="reg_date" property="regDate" />
+        <result column="tel_no" property="telNo" />
+        <result column="status" property="status" />
+        <result column="status_name" property="statusName" />
+        <result column="ecnomic_code" property="ecnomicCode" />
+        <result column="ecnomic_code_name" property="ecnomicCodeName" />
+        <result column="industry_code" property="industryCode" />
+        <result column="industry_code_name" property="industryCodeName" />
+        <result column="AREA_CODE" property="areaCode" />
+        <result column="business_scope" property="businessScope" />
+        <result column="data_source" property="dataSource" />
+        <result column="data_source_name" property="dataSourceName" />
+        <result column="reg_capital" property="regCapital" />
+        <result column="currency_type" property="currencyType" />
+        <result column="postcode" property="postcode" />
+        <result column="update_date" property="updateDate" />
+        <result column="revoke_date" property="revokeDate" />
+        <result column="jsjdm" property="jsjdm" />
+        <result column="swdjzh" property="swdjzh" />
+        <result column="kydjrq" property="kydjrq" />
+        <result column="swjgzzjgdm_name" property="swjgzzjgdmName" />
+        <result column="nsrzt" property="nsrzt" />
+        <result column="nsrzt_name" property="nsrztName" />
+        <result column="fzrq" property="fzrq" />
+        <result column="zfrq" property="zfrq" />
+        <result column="dszxrq" property="dszxrq" />
+        <result column="fzjg" property="fzjg" />
+        <result column="fzjg_name" property="fzjgName" />
+        <result column="jyqxz" property="jyqxz" />
+        <result column="uni_scid" property="uniScid" />
+        <result column="update_time" property="updateTime" />
+        <result column="org_lat" property="orgLat" />
+        <result column="org_lng" property="orgLng" />
+    </resultMap>
+
+    <delete id="clear">
+        delete from legal_person where DATE_FORMAT(create_time,"%Y-%m-%d") != DATE_FORMAT(SYSDATE(),"%Y-%m-%d");
+    </delete>
+    <select id="selectLegalPerson" resultType="com.services.data.model.LegalPerson">
+        SELECT * FROM legal_person limit 10000;
+    </select>
+</mapper>
