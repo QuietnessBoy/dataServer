@@ -1,9 +1,8 @@
 package com.services.data.util;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.services.data.dto.InterResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.*;
 
 /**
  * @ProjectName yizhuangsmartcity
@@ -21,35 +20,8 @@ import java.util.*;
 @Service
 public class AppendUrlParm {
 
-    @Value("${ip}")
-    public String ip;
-
-    @Value("${method}")
-    private String method;
-
-    @Value("${tableListUrl}")
-    private String tableListUrl;
-
-    @Value("${tableGetUrl}")
-    private String tableGetUrl;
-
-    @Value("${dataUrl}")
-    private String dataUrl;
-
-    @Value("${appKey}")
-    private String appKey;
-
-    @Value("${legalPersonTableId}")
-    private String legalPersonTableId;
-
-    @Value("${wifiInfoTableId}")
-    private String wifiInfoTableId;
-
-    @Value("${pageNum}")
-    private String pageNum;
-
-    @Value("${pageSize}")
-    private String pageSize;
+    @Autowired
+    private InterResult interResult;
 
     private long timestamp = System.currentTimeMillis();
 
@@ -62,10 +34,10 @@ public class AppendUrlParm {
     */
     public String appendTableListUrl(String sign){
         StringBuffer sb = new StringBuffer();
-        sb = sb.append(ip).
-                append(tableListUrl).
+        sb = sb.append(interResult.getIp()).
+                append(interResult.getTableListUrl()).
                 append("?appKey=").
-                append(appKey).
+                append(interResult.getAppKey()).
                 append("&sign=").
                 append(sign).
                 append("&timestamp=").
@@ -84,15 +56,15 @@ public class AppendUrlParm {
         StringBuffer sb = new StringBuffer();
         String tableId = "";
         if(num.equals("1")){
-            tableId = legalPersonTableId;
+            tableId = interResult.getLegalPersonTableId();
         }
         if(num.equals("2")){
-            tableId = wifiInfoTableId;
+            tableId = interResult.getWifiInfoTableId();
         }
-        sb = sb.append(ip).
-                append(tableGetUrl).
+        sb = sb.append(interResult.getIp()).
+                append(interResult.getTableGetUrl()).
                 append("?appKey=").
-                append(appKey).
+                append(interResult.getAppKey()).
                 append("&sign=").
                 append(sign).
                 append("&timestamp=").
@@ -113,15 +85,15 @@ public class AppendUrlParm {
         StringBuffer sb = new StringBuffer();
         String tableId = "";
         if(num.equals("1")){
-            tableId = legalPersonTableId;
+            tableId = interResult.getLegalPersonTableId();
         }
         if(num.equals("2")){
-            tableId = wifiInfoTableId;
+            tableId = interResult.getWifiInfoTableId();
         }
-        sb = sb.append(ip).
-                append(dataUrl).
+        sb = sb.append(interResult.getIp()).
+                append(interResult.getDataUrl()).
                 append("?appKey=").
-                append(appKey).
+                append(interResult.getAppKey()).
                 append("&sign=").
                 append(sign).
                 append("&timestamp=").
@@ -129,9 +101,9 @@ public class AppendUrlParm {
                 append("&tableId=").
                 append(tableId).
                 append("&pageNum=").
-                append(pageNum).
+                append(interResult.getPageNum()).
                 append("&pageSize=").
-                append(pageSize);
+                append(interResult.getPageSize());
         return sb.toString();
     }
 

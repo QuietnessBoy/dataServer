@@ -2,7 +2,7 @@
 
 <configuration>
     <!-- 指定配置文件 -->
-    <property resource="service.pro.properties" />
+<!--    <property resource="service.pro.properties" />-->
     <!-- 属性文件:在properties文件中找到对应的配置项 -->
     <contextName>dataService</contextName>
     <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">

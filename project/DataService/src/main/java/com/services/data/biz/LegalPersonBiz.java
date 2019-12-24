@@ -91,6 +91,7 @@ public class LegalPersonBiz {
     public JsonResult collectLegalPerson(){
         String legalPersonSign = genSign.genRequestSign("3");
         String url = appendUrlParm.appendDataUrl(legalPersonSign,"1");
+        System.out.println("###########"+url);
 //        String methodUrl = "http://10.117.5.223:86//etown-bigdata-datashare/api/datashare/data?appKey=c56fc3ab3bb9100fef62bf4bca330adb669b5208&sign=dfaaa8f62aea8024728ab5e1aea62dfc&timestamp=1576661562848&tableId=32033be2c26111e9b84a7cd30a5dd860&pageNum=1&pageSize=10000";
         JsonResult httpJsonResult = HttpMethod.httpGETCase(url);   // 接受http请求返回值
         JsonResult jsonResult = new JsonResult();

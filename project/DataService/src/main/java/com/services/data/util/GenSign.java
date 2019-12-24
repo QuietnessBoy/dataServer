@@ -1,12 +1,9 @@
 package com.services.data.util;
 
+import com.services.data.dto.InterResult;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @ProjectName yizhuangsmartcity
@@ -23,23 +20,9 @@ import java.util.Map;
  */
 @Service
 public class GenSign {
-    @Value("${appScret}")
-    private String appScret;
 
-    @Value("${tableListUrl}")
-    private String tableListUrl;
-
-    @Value("${tableGetUrl}")
-    private String tableGetUrl;
-
-    @Value("${dataUrl}")
-    private String dataUrl;
-
-
-    @Value("${method}")
-    private String method;
-    @Value("${projectName}")
-    private String projectName;
+    @Autowired
+    private InterResult interResult;
 
     private long timestamp = System.currentTimeMillis();
 
@@ -49,26 +32,23 @@ public class GenSign {
      * 1: 获取数据列表查询权限接口  2: 获取表数据结构接口  3：获取数据接口
      * @return  sign
      * @author wangw
-     * @date  
+     * @date
     */
     public String genRequestSign(String num){
         String url = "";
         if(num.equals("1")){
-            url = tableListUrl;
+            url = interResult.getTableListUrl();
         }
         if(num.equals("2")){
-            url = tableGetUrl;
+            url = interResult.getTableGetUrl();
         }
         if(num.equals("3")){
-            url = dataUrl;
+            url = interResult.getDataUrl();
         }
-        String signMsg = method+projectName+url+appScret+timestamp;
+        String signMsg = interResult.getMethod()+interResult.getProjectName()+url+interResult.getAppScret()+timestamp;
         String sign = DigestUtils.md5Hex(signMsg);
         System.out.println(sign);
         return sign;
     }
 
-    public static void main(String[] args) {
-
-    }
 }

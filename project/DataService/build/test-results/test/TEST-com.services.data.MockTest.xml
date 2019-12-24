@@ -1,14 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.services.data.MockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-19T09:36:08" hostname="DESKTOP-82JIJ25" time="0.303">
+<testsuite name="com.services.data.MockTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-12-24T03:05:37" hostname="DESKTOP-82JIJ25" time="0.002">
   <properties/>
-  <testcase name="exampleTest" classname="com.services.data.MockTest" time="0.303"/>
-  <system-out><![CDATA[?[33m2019-12-19 17:36:03?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mNeither @ContextConfiguration nor @ContextHierarchy found for test class [com.services.data.MockTest], using SpringBootContextLoader?[0;39m 
-?[33m2019-12-19 17:36:03?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.test.context.support.AbstractContextLoader?[0;39m - ?[35mCould not detect default resource locations for test class [com.services.data.MockTest]: no resource found for suffixes {-context.xml, Context.groovy}.?[0;39m 
-?[33m2019-12-19 17:36:03?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.t.c.support.AnnotationConfigContextLoaderUtils?[0;39m - ?[35mCould not detect default configuration classes for test class [com.services.data.MockTest]: MockTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.?[0;39m 
-?[33m2019-12-19 17:36:03?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mFound @SpringBootConfiguration com.services.data.DataServiceApplication for test class com.services.data.MockTest?[0;39m 
-?[33m2019-12-19 17:36:03?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mLoaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]?[0;39m 
-?[33m2019-12-19 17:36:03?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mUsing TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@62fda0c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3cc5c6ef, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5a9edd8d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6a9060f3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@12172817, org.springframework.test.context.transaction.TransactionalTestExecutionListener@776604, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2c29b132, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4557cbbc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6eab0491, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55d71806, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@349683af, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4f67a4aa]?[0;39m 
-?[33m2019-12-19 17:36:04?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker?[0;39m - ?[35mBean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$45823e1c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)?[0;39m 
+  <testcase name="exampleTest" classname="com.services.data.MockTest" time="0.002">
+    <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'legalPersonBiz': Unsatisfied dependency expressed through field 'genSign'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'genSign': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value &quot;${appScret}&quot;
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 49 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'genSign': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value &quot;${appScret}&quot;
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 67 more
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value &quot;${appScret}&quot;
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	... 78 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[?[33m2019-12-24 11:05:34?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mNeither @ContextConfiguration nor @ContextHierarchy found for test class [com.services.data.MockTest], using SpringBootContextLoader?[0;39m 
+?[33m2019-12-24 11:05:34?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.test.context.support.AbstractContextLoader?[0;39m - ?[35mCould not detect default resource locations for test class [com.services.data.MockTest]: no resource found for suffixes {-context.xml, Context.groovy}.?[0;39m 
+?[33m2019-12-24 11:05:34?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.t.c.support.AnnotationConfigContextLoaderUtils?[0;39m - ?[35mCould not detect default configuration classes for test class [com.services.data.MockTest]: MockTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.?[0;39m 
+?[33m2019-12-24 11:05:34?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mFound @SpringBootConfiguration com.services.data.DataServiceApplication for test class com.services.data.MockTest?[0;39m 
+?[33m2019-12-24 11:05:34?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mLoaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]?[0;39m 
+?[33m2019-12-24 11:05:34?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.t.context.SpringBootTestContextBootstrapper?[0;39m - ?[35mUsing TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@758ddb0f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73520183, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@27a1f7ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24d0ccc4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3f1e3ef2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5ca36e8b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7415e46d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5601a0c7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@18a6ed5b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f360ff2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@45bbef5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5f072121]?[0;39m 
+?[33m2019-12-24 11:05:35?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker?[0;39m - ?[35mBean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8f3c8b02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)?[0;39m 
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -18,41 +119,223 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.8.RELEASE)
 
-?[33m2019-12-19 17:36:04?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.services.data.MockTest?[0;39m - ?[35mNo active profile set, falling back to default profiles: default?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'BLegalPersonMapper' and 'com.services.data.mapper.BLegalPersonMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'BWifiInfoMapper' and 'com.services.data.mapper.BWifiInfoMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'legalPersonMapper' and 'com.services.data.mapper.LegalPersonMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'wifiInfoMapper' and 'com.services.data.mapper.WifiInfoMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mNo MyBatis mapper was found in '[com.services.data.mapper]' package. Please check your configuration.?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.springframework.cloud.context.scope.GenericScope?[0;39m - ?[35mBeanFactory id=4648034d-2c46-32e5-9594-9c0830cf154a?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker?[0;39m - ?[35mBean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$29683b1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker?[0;39m - ?[35mBean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$45823e1c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mc.r.vesta.service.factory.IdServiceFactoryBean?[0;39m - ?[35mConstruct Property IdService machineId 1021?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.timer.SimpleTimer?[0;39m - ?[35mThe current time bit length is 40, the expiration date is Sun Nov 03 19:53:47 CST 2052, this can be used for 12008 days.?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.IdServiceImpl?[0;39m - ?[35mThe default LockIdPopulator is used.?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mc.r.vesta.service.factory.IdServiceFactoryBean?[0;39m - ?[35mConstruct Property IdService machineId 1021?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.timer.SimpleTimer?[0;39m - ?[35mThe current time bit length is 40, the expiration date is Sun Nov 03 19:53:47 CST 2052, this can be used for 12008 days.?[0;39m 
-?[33m2019-12-19 17:36:05?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.IdServiceImpl?[0;39m - ?[35mThe default LockIdPopulator is used.?[0;39m 
+?[33m2019-12-24 11:05:35?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.services.data.MockTest?[0;39m - ?[35mNo active profile set, falling back to default profiles: default?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'BLegalPersonMapper' and 'com.services.data.mapper.BLegalPersonMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'BWifiInfoMapper' and 'com.services.data.mapper.BWifiInfoMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'legalPersonMapper' and 'com.services.data.mapper.LegalPersonMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mSkipping MapperFactoryBean with name 'wifiInfoMapper' and 'com.services.data.mapper.WifiInfoMapper' mapperInterface. Bean already defined with the same name!?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.mybatis.spring.mapper.ClassPathMapperScanner?[0;39m - ?[35mNo MyBatis mapper was found in '[com.services.data.mapper]' package. Please check your configuration.?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.springframework.cloud.context.scope.GenericScope?[0;39m - ?[35mBeanFactory id=d1e8e0cf-849c-3550-aa39-ee1d8acadaa0?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker?[0;39m - ?[35mBean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73228805] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker?[0;39m - ?[35mBean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8f3c8b02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mc.r.vesta.service.factory.IdServiceFactoryBean?[0;39m - ?[35mConstruct Property IdService machineId 1021?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.timer.SimpleTimer?[0;39m - ?[35mThe current time bit length is 40, the expiration date is Sun Nov 03 19:53:47 CST 2052, this can be used for 12003 days.?[0;39m 
+?[33m2019-12-24 11:05:36?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.IdServiceImpl?[0;39m - ?[35mThe default LockIdPopulator is used.?[0;39m 
  _ _   |_  _ _|_. ___ _ |    _ 
 | | |\/|_)(_| | |_\  |_)||_|_\ 
      /               |         
                         3.2.0 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mc.r.vesta.service.factory.IdServiceFactoryBean?[0;39m - ?[35mConstruct Property IdService machineId 1021?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.timer.SimpleTimer?[0;39m - ?[35mThe current time bit length is 40, the expiration date is Sun Nov 03 19:53:47 CST 2052, this can be used for 12008 days.?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.robert.vesta.service.impl.IdServiceImpl?[0;39m - ?[35mThe default LockIdPopulator is used.?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36mcom.netflix.config.sources.URLConfigurationSource?[0;39m - ?[35mNo URLs will be polled as dynamic configuration sources.?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.netflix.config.sources.URLConfigurationSource?[0;39m - ?[35mTo enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36mcom.netflix.config.sources.URLConfigurationSource?[0;39m - ?[35mNo URLs will be polled as dynamic configuration sources.?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.netflix.config.sources.URLConfigurationSource?[0;39m - ?[35mTo enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.scheduling.concurrent.ThreadPoolTaskExecutor?[0;39m - ?[35mInitializing ExecutorService 'applicationTaskExecutor'?[0;39m 
-?[33m2019-12-19 17:36:06?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.a.web.servlet.WelcomePageHandlerMapping?[0;39m - ?[35mAdding welcome page: class path resource [templates/index.html]?[0;39m 
-?[33m2019-12-19 17:36:07?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36morg.thymeleaf.templatemode.TemplateMode?[0;39m - ?[35m[THYMELEAF][Test worker] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.?[0;39m 
-Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
-?[33m2019-12-19 17:36:07?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.scheduling.concurrent.ThreadPoolTaskScheduler?[0;39m - ?[35mInitializing ExecutorService 'taskScheduler'?[0;39m 
-?[33m2019-12-19 17:36:08?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.services.data.MockTest?[0;39m - ?[35mStarted MockTest in 5.141 seconds (JVM running for 6.162)?[0;39m 
-?[33m2019-12-19 17:36:08?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.zaxxer.hikari.HikariDataSource?[0;39m - ?[35mHikariPool-1 - Starting...?[0;39m 
-?[33m2019-12-19 17:36:08?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mcom.zaxxer.hikari.HikariDataSource?[0;39m - ?[35mHikariPool-1 - Start completed.?[0;39m 
-JDBC Connection [HikariProxyConnection@499252887 wrapping org.mariadb.jdbc.MariaDbConnection@5d47b9] will be managed by Spring
+?[33m2019-12-24 11:05:37?[0;39m ?[31m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[36mo.s.w.context.support.GenericWebApplicationContext?[0;39m - ?[35mException encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'legalPersonBiz': Unsatisfied dependency expressed through field 'genSign'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'genSign': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value "${appScret}"?[0;39m 
+?[33m2019-12-24 11:05:37?[0;39m ?[31m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[36mo.s.b.a.l.ConditionEvaluationReportLoggingListener?[0;39m - ?[35m
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.?[0;39m 
+?[33m2019-12-24 11:05:37?[0;39m ?[31m[Test worker]?[0;39m ?[1;31mERROR?[0;39m ?[36morg.springframework.boot.SpringApplication?[0;39m - ?[35mApplication run failed?[0;39m 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'legalPersonBiz': Unsatisfied dependency expressed through field 'genSign'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'genSign': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value "${appScret}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'genSign': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value "${appScret}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 67 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value "${appScret}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	... 78 common frames omitted
+?[33m2019-12-24 11:05:37?[0;39m ?[31m[Test worker]?[0;39m ?[1;31mERROR?[0;39m ?[36mo.springframework.test.context.TestContextManager?[0;39m - ?[35mCaught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@758ddb0f] to prepare test instance [com.services.data.MockTest@4ec8c12e]?[0;39m 
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'legalPersonBiz': Unsatisfied dependency expressed through field 'genSign'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'genSign': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value "${appScret}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'genSign': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value "${appScret}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 67 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'appScret' in value "${appScret}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	... 78 common frames omitted
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

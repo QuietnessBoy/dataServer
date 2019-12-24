@@ -2,7 +2,7 @@
 
 <configuration>
     <!-- 指定配置文件 -->
-    <property resource="service.pro.properties" />
+<!--    <property resource="service.pro.properties" />-->
     <!-- 属性文件:在properties文件中找到对应的配置项 -->
     <contextName>dataService</contextName>
     <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
@@ -30,7 +30,7 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--按时间保存日志 修改格式可以按小时、按天、月来保存-->
-            <fileNamePattern>${logDir}/dataService.info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${logparm.logDir}/dataService.info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--保存时长-->
             <MaxHistory>90</MaxHistory>
             <!--文件大小-->
@@ -50,7 +50,7 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>${logDir}/dataService.error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${logparm.logDir}/dataService.error.%d{yyyy-MM-dd}.log</fileNamePattern>
             <MaxHistory>90</MaxHistory>
         </rollingPolicy>
     </appender>

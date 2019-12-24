@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+    compileOnly "org.springframework.boot:spring-boot-configuration-processor"
     compile group: 'com.alibaba', name: 'fastjson', version: '1.2.58'
     testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.29'

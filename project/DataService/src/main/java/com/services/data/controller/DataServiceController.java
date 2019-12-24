@@ -1,6 +1,5 @@
 package com.services.data.controller;
 
-import com.services.data.biz.DataServiceBiz;
 import com.services.data.dto.JsonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,10 +31,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class DataServiceController {
 
-    @Autowired
-    private DataServiceBiz dataServiceBiz;
-
-
     /**
      * @Title 查询法人表&wifi信息表等全部数据
      * @Descriptio 提供服务方所需要查询的数据信息
@@ -47,9 +42,9 @@ public class DataServiceController {
     public JsonResult getData(){
 
         log.info("【服务方调用接口，准备获取数据】");
-        JsonResult jsonResult = dataServiceBiz.getData();
+//        JsonResult jsonResult = dataServiceBiz.getData();
         log.info("【服务方获取数据完毕!】");
-        return jsonResult;
+        return null;
     }
 
 

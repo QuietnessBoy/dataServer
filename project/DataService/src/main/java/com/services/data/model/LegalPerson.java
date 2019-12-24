@@ -223,6 +223,6 @@ public class LegalPerson implements Serializable {
      */
     private String updateTime;
 
-    private String orgLat;
-    private String orgLng;
+//    private String orgLat;
+//    private String orgLng;
 }

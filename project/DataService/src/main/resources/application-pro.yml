@@ -1,0 +1,37 @@
+interparm:
+    ip: http://10.117.5.223:86//etown-bigdata-datashare
+    appKey: c56fc3ab3bb9100fef62bf4bca330adb669b5208
+    appScret: bd2534f6b779738a2a7b40e886a74642ad8e8696
+    tableListUrl: /api/datashare/table/list
+    tableGetUrl: /api/datashare/table/get
+    dataUrl: /api/datashare/data
+    projectName: /etown-bigdata-datashare
+    method: GET
+    legalPersonTableId: 32033be2c26111e9b84a7cd30a5dd860
+    wifiInfoTableId: 1fc22963e10511e9b84a7cd30a5dd860
+    pageNum: 1
+    pageSize: 10000
+
+logparm:
+    logDir: /home/DataServer/logs/
+    contextName: DataServiceLog
+
+server:
+    port: 8888
+    ip: 192.168.0.98
+
+spring:
+    application:
+        name: dataserver
+    datasource:
+        driver-class-name: org.mariadb.jdbc.Driver
+        url: jdbc:mariadb://192.168.0.98:3306/dataserver?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&useSSL=false
+        username: root
+        password: Yz2019
+        hikari:
+            maximum-pool-size: 10000
+            minimum-idle: 100
+            connection-timeout: 30000
+            idle-timeout: 30000
+            connection-test-query: SELECT 1
+

@@ -7,6 +7,7 @@ import com.services.data.util.GenSign;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -30,25 +31,4 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class MockTest {
-
-    @Autowired
-    private GenSign genSign;
-
-    @Autowired
-    private AppendUrlParm appendUrlParm;
-
-    @Autowired
-    private WifiInfoService wifiInfoService;
-    @Test
-    public void exampleTest() {
-        WifiInfo wifiInfo = new WifiInfo();
-        wifiInfo.setId(Long.valueOf(3));
-        WifiInfo wifiInfo1 = new WifiInfo();
-        wifiInfo1.setId(Long.valueOf(4));
-        List list = new ArrayList();
-        list.add(wifiInfo);
-        list.add(wifiInfo1);
-        wifiInfoService.saveBatch(list);
-    }
-
 }
